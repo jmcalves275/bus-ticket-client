@@ -1,3 +1,5 @@
+import requests
+
 class Client(object):
 
   def __init__(self, name, city):
@@ -7,5 +9,5 @@ class Client(object):
   def getName(self):
     return self.name
 
-  def printCityName(self):
-    print (self.city.getName(), self.city.getID())
+  def getCities(self):
+    return requests.get('https://www.rede-expressos.pt/api/locations/origins?international=true')
