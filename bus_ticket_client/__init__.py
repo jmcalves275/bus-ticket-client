@@ -8,4 +8,4 @@ class Client(object):
     return self.name
 
   def printCityName(self):
-    print (self.city)
+    print (self.city.getName(), self.city.getID())
